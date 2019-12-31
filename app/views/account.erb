@@ -7,6 +7,15 @@
   </head>
   <body id="page-top">
     
-
+    <% check = Helpers.is_logged_in? %>
+    <%= binding.pry%>
+    <% if check == true %>
+      "Welcome <%=" " + @user.username%>"
+      <%= @user.balance %>
+      <a href="/logout">Log Out</a>
+    <% else %>
+    <a href="/">Home Page</a>
+    <% end %>
+    
   </body>
 </html>
